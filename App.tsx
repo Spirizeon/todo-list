@@ -7,12 +7,8 @@ export default function App(){
 		<View style={styles.container}>
 			<Text style={styles.sectionTitle}>Today's tasks</Text> 
 			<View style={styles.items}>
-				<Task />
-				<Task />
-				<Task />
-				<Task />
-				<Task />
-				<Task />
+				<Task text = {'Task 1'}/>
+				<Task text = {'Task 2'}/>
 			</View>
 		</View>
 	);
@@ -20,15 +16,19 @@ export default function App(){
 const styles = StyleSheet.create({
     container: {
     	flex: 1,
-	backgroundColor: '#EBEAED', 
+	backgroundColor: '#FF0F00', 
     },
     taskpanes: {
     	paddingTop: 80, 
-	paddingHorizontal: 20,
+	paddingHorizontal: 40,
     },
     sectionTitle: {
-    	fontSize: 24,
-	fontWeight: 'bold'	
+    	fontSize: 28,
+	alignSelf: 'center',
+	paddingTop: 20,
     },
-    items: {},
+    items: {
+    marginTop: 30,
+    
+    },
 });

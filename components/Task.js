@@ -1,13 +1,50 @@
 import React from 'react';
-import { View, Text, Stylesheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-const Task = () => {
+const Task = (props) => {
 
 	return ( 
-		<View>
-
-			<Text>This is a task</Text> 
+		<View style= {styles.item}>
+			<View style={styles.itemLeft}>
+				<View style={styles.square}></View> 
+				<Text style={styles.itemText}>{props.text}</Text> 
+			</View>
+			<View style={styles.circular}></View> 
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	item: {
+		backgroundColor: '#FFF',
+		padding: 15,
+		borderRadius: 10,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		marginBottom: 20,
+	},
+	itemLeft: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		flexWrap: 'wrap',
+	},
+	itemText: {
+
+	},
+	square: { 
+		width: 24,
+		height: 24,
+		backgroundColor: '#55BCf6',
+		opacity: 0.4,
+		padding: 13,
+	},
+	circular: {
+		width: 12,
+		height: 12,
+		borderColor: "#55BCF6",
+		borderWidth: 2,
+		borderRadius: 5,
+	},
+})
+
 export default Task;
